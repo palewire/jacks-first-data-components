@@ -55,9 +55,9 @@ This is your page!
     );
 
     let displayed = $derived(restaurants.slice(0, 100));
-    let displayedGradeA = $derived(displayed.filter(r => r.grade === 'A'));
-    let displayedGradeB = $derived(displayed.filter(r => r.grade === 'B'));
-    let displayedGradeC = $derived(displayed.filter(r => r.grade === 'C'));
+    let displayedGradeA = $derived(restaurants.filter(r => r.grade === 'A'));
+    let displayedGradeB = $derived(restaurants.filter(r => r.grade === 'B'));
+    let displayedGradeC = $derived(restaurants.filter(r => r.grade === 'C'));
 </script>
 
 <!-- This sets the page title in the browser tab -->
@@ -67,7 +67,7 @@ This is your page!
 </svelte:head>
 
 <!-- Your page content goes here -->
-  
+
   <!-- Article Header: Headline, byline, and publication date -->
   <div class="header-wrapper">
     <ArticleHeader
@@ -146,7 +146,7 @@ This is your page!
 <RestaurantTable data={displayed} />
 
 <hr>
-  
+
     <p>
       At the Craig Newmark Graduate School of Journalism at the City University of New York, change is in our DNA. That comes of being born in 2006, as the digital revolution was transforming our profession in ways none of us could have imagined.
     </p>
